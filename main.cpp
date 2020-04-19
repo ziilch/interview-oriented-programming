@@ -10,8 +10,7 @@
 
 int main() {
     BinarySearch binarySearch;
-    SortMethod sortMethod;
-    DpMethod dpMethod;
+
     cout << sizeof(binarySearch);
     return 0;
 }
