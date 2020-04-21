@@ -2,8 +2,8 @@
 // Created by zorro on 2020/4/21.
 //
 
-#ifndef SELF_TEST
-#define SELF_TEST
+#ifndef INTERVIEW_PROGRAMMING_SELF_TEST
+#define INTERVIEW_PROGRAMMING_SELF_TEST
 
 #include "SortMethod.hpp"
 #include "SelfUtil.hpp"
@@ -33,4 +33,4 @@ private:
     SelfUtil* selfUtil = new SelfUtil;
 };
 
-#endif //SELF_TEST
+#endif //INTERVIEW_PROGRAMMING_

@@ -2,8 +2,8 @@
 // Created by zilch on 2019/8/24.
 //
 
-#ifndef BASEINCLUDE_H
-#define BASEINCLUDE_H
+#ifndef INTERVIEW_PROGRAMMING_BASEINCLUDE_H
+#define INTERVIEW_PROGRAMMING_BASEINCLUDE_H
 
 #include <algorithm>
 #include <unordered_map>
@@ -13,6 +13,8 @@
 #include <stdlib.h>
 #include <math.h>
 #include <vector>
+#include <queue>
+#include <stack>
 
 using namespace std;
-#endif //BASEINCLUDE_H
+#endif //INTERVIEW_PROGRAMMING_BASEINCLUDE_H

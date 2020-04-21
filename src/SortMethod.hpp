@@ -2,8 +2,8 @@
 // Created by zorro on 2020/4/1.
 //
 
-#ifndef SORT_METHOD
-#define SORT_METHOD
+#ifndef INTERVIEW_PROGRAMMING_SORT_METHOD
+#define INTERVIEW_PROGRAMMING_SORT_METHOD
 
 #include "../includes/BaseInclude.h"
 
@@ -74,4 +74,4 @@ private:
     }
 };
 
-#endif //SORT_METHOD
+#endif //INTERVIEW_PROGRAMMING_SORT_METHOD

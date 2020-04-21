@@ -1,8 +1,8 @@
 //
 // Created by zorro on 2020/4/21.
 //
-#ifndef SELF_UTIL
-#define SELF_UTIL
+#ifndef INTERVIEW_PROGRAMMING_SELF_UTIL
+#define INTERVIEW_PROGRAMMING_SELF_UTIL
 
 class SelfUtil{
 public:
@@ -14,4 +14,4 @@ public:
     }
 };
 
-#endif SELF_UTIL
+#endif INTERVIEW_PROGRAMMING_SELF_UTIL

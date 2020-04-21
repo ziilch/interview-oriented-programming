@@ -1,8 +1,8 @@
 //
 // Created by zorro on 2020/4/19.
 //
-#ifndef DP_METHOD
-#define DP_METHOD
+#ifndef INTERVIEW_PROGRAMMING_DP_METHOD
+#define INTERVIEW_PROGRAMMING_DP_METHOD
 
 #include "../includes/BaseInclude.h"
 class DpMethod {
@@ -28,4 +28,4 @@ public:
 
 
 
-#endif //DP_METHOD
+#endif //INTERVIEW_PROGRAMMING_DP_METHOD

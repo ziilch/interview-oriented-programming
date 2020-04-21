@@ -1,8 +1,8 @@
 //
 // Created by zorro on 2020/4/19.
 //
-#ifndef BINARRY_SEARCH
-#define BINARRY_SEARCH
+#ifndef INTERVIEW_PROGRAMMING_BINARRY_SEARCH
+#define INTERVIEW_PROGRAMMING_BINARRY_SEARCH
 
 #include "../includes/BaseInclude.h"
 class BinarySearch {
@@ -30,4 +30,4 @@ public:
 
 
 
-#endif //BINARRY_SEARCH
+#endif //INTERVIEW_PROGRAMMING_BINARRY_SEARCH
