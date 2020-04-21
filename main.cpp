@@ -7,11 +7,11 @@
 #include "src/BinarySearch.hpp"
 #include "src/SortMethod.hpp"
 #include "src/SelfTest.hpp"
+#include "src/SelfUtil.hpp"
 
 int main() {
     SelfTest selfTest;
-    selfTest.sortCompare(100000);
-
+    selfTest.createListNode("1,2,3,4");
     return 0;
 }
 
