@@ -6,12 +6,12 @@
 #include <algorithm>
 #include "src/BinarySearch.hpp"
 #include "src/SortMethod.hpp"
-#include "src/DpMethod.hpp"
+#include "src/SelfTest.hpp"
 
 int main() {
-    BinarySearch binarySearch;
+    SelfTest selfTest;
+    selfTest.sortCompare(100000);
 
-    cout << sizeof(binarySearch);
     return 0;
 }
 

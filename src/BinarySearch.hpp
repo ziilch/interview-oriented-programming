@@ -1,6 +1,9 @@
 //
 // Created by zorro on 2020/4/19.
 //
+#ifndef BINARRY_SEARCH
+#define BINARRY_SEARCH
+
 #include "../includes/BaseInclude.h"
 class BinarySearch {
 public:
@@ -25,3 +28,6 @@ public:
     }
 };
 
+
+
+#endif //BINARRY_SEARCH

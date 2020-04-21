@@ -1,6 +1,8 @@
 //
 // Created by zorro on 2020/4/19.
 //
+#ifndef DP_METHOD
+#define DP_METHOD
 
 #include "../includes/BaseInclude.h"
 class DpMethod {
@@ -23,3 +25,7 @@ public:
         return res;
     }
 };
+
+
+
+#endif //DP_METHOD

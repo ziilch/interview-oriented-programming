@@ -2,8 +2,8 @@
 // Created by zorro on 2020/4/1.
 //
 
-#ifndef LEETCODERECORD_SOLUTION_HPP
-#define LEETCODERECORD_SOLUTION_HPP
+#ifndef SORT_METHOD
+#define SORT_METHOD
 
 #include "../includes/BaseInclude.h"
 
@@ -74,11 +74,4 @@ private:
     }
 };
 
-
-
-
-
-
-
-
-#endif //LEETCODERECORD_SOLUTION_HPP
+#endif //SORT_METHOD

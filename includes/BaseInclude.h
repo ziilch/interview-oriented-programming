@@ -2,8 +2,8 @@
 // Created by zilch on 2019/8/24.
 //
 
-#ifndef LEETCODERECORD_BASEINCLUDE_H
-#define LEETCODERECORD_BASEINCLUDE_H
+#ifndef BASEINCLUDE_H
+#define BASEINCLUDE_H
 
 #include <algorithm>
 #include <unordered_map>
@@ -15,4 +15,4 @@
 #include <vector>
 
 using namespace std;
-#endif //LEETCODERECORD_BASEINCLUDE_H
+#endif //BASEINCLUDE_H
