@@ -8,10 +8,13 @@
 #include "src/SortMethod.hpp"
 #include "src/SelfTest.hpp"
 #include "src/SelfUtil.hpp"
+#include "src/BinaryTree.hpp"
 
 int main() {
-    SelfTest selfTest;
-    selfTest.createListNode("1,2,3,4");
+    BinaryTree binaryTree;
+    vector<int> v1 = {3,9,20,15,7}, v2 = {9,3,15,20,7};
+
+    binaryTree.buildTree(v1, v2);
     return 0;
 }
 
