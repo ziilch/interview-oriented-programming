@@ -72,17 +72,59 @@ public:
 
     // M-L236-****
     // 给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。
+    // 所有节点的值都是唯一的。p、q 为不同节点且均存在于给定的二叉树中。
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        // 假设这不是一个递归函数，我们怎么看待这个方法：
+        // 前提：一定存在这样一个节点
+        // left为p或者q其中一个的父节点
+        // right为p或者q其中一个的父节点
+        // 如果left为空 那么right一定就是需要的节点
+        // 反之亦然
+        // 如果left和right都不为空，说明这两个一个是左节点的父节点，一个是又节点的父节点，所以要返回root
+
         if (root == NULL || root == p || root == q) return root;
         TreeNode* left = lowestCommonAncestor(root->left, p, q);
         TreeNode* right = lowestCommonAncestor(root->right, p, q);
-
         if (left == NULL) return right;
         if (right == NULL) return left;
         return root;
     }
 
+    // M-J32-*****
+    // 层次遍历二叉树
+    vector<int> levelOrder(TreeNode* root) {
+        vector<int> ans;
+        if (! root) return ans;
+        queue<TreeNode*> level;
+        level.push(root);
+        while (! level.empty()) {
+            queue<TreeNode*> temp;
+            while (! level.empty()) {
+                TreeNode* tmp = level.front();
+                ans.push_back(tmp->val);
+                level.pop();
+                if (tmp->left) temp.push(tmp->left);
+                if (tmp->right) temp.push(tmp->right);
+            }
+            level = temp;
+        }
+        return ans;
+    }
+
+    // M-J26-**
+    // 输入两棵二叉树A和B，判断B是不是A的子结构。(约定空树不是任意一个树的子结构)
+    bool isSubStructure(TreeNode* A, TreeNode* B) {
+        return dfsJ26(A, B) || isSubStructure(A->left, B) || isSubStructure(A->right, B);
+    }
+
 private:
+    bool dfsJ26(TreeNode* A, TreeNode* B) {
+        if (! B) return true;
+        if (! A) return false;
+        if (A->val == B->val) return dfsJ26(A->left, B->left) && dfsJ26(A->right, B->right);
+        else return false;
+    }
+
     void dfsJ54(TreeNode* root, int& cnt, int k, int& res) {
         if (root == NULL) return;
         dfsJ54(root->right, cnt, k, res);
