@@ -117,7 +117,27 @@ public:
         return dfsJ26(A, B) || isSubStructure(A->left, B) || isSubStructure(A->right, B);
     }
 
+    // M-L113-**
+    vector<vector<int>> pathSum(TreeNode* root, int sum) {
+        dfsL113(root, sum);
+        return ans;
+    }
+
 private:
+    vector<vector<int>> ans;
+    vector<int> path;
+    void dfsL113(TreeNode* root, int sum) {
+        if (root == NULL) return;
+        path.push_back(root->val);
+        sum -= root->val;
+        if (sum == 0 && root->left == NULL && root->right == NULL) {
+            ans.push_back(path);
+        } else {
+            dfsL113(root->left, sum);
+            dfsL113(root->right, sum);
+        }
+        path.pop_back();
+    }
     bool dfsJ26(TreeNode* A, TreeNode* B) {
         if (! B) return true;
         if (! A) return false;
