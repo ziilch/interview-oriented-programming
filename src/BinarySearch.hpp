@@ -52,7 +52,7 @@ public:
         // 首先用二分法找到数组中第一个小于首个元素的位置
         int left = 0, right = nums.size() - 1;
         while (left < right) {
-            int mid = left + right >> 1;
+            int mid = (left + right) >> 1;
             if (nums[mid] < nums[0]) right = mid;
             else left = mid + 1;
         }
@@ -69,7 +69,7 @@ public:
         }
 
         while(left < right) {
-            int mid = left +right + 1 >>1;
+            int mid = (left +right + 1) >>1;
             if (nums[mid] <= target) left = mid;
             else right = mid - 1;
         }
