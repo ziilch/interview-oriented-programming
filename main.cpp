@@ -4,36 +4,22 @@
 
 #include "includes/BaseInclude.h"
 #include "src/SelfUtil.hpp"
+#include "src/ListNode.hpp"
 #include <iomanip>
+#include <regex>
 
-int lengthOfLongestSubstring(string s) {
-    unordered_map<char, int> ht;
-    int p1 = 0, p2 = 0, n = s.size(), res = 0;
-    while (p2 < n) {
-        if (ht.find(s[p2]) != ht.end() && ht[s[p2]] >= p1) {
-            //res = max(p2 - p1, res);
-            p1 = ht[s[p2]] + 1;
-        }
-        ht[s[p2]] = p2;
-        res = max(res, p2 - p1 + 1);
-        if (res == 5) cout << p2 << p1;
-        p2 ++;
-    }
-    return res;
-}
-
-
+#include <cctype>
 
 int main(int argc, char* argv[])
 {
-    string ss = "[1,2,3,null,null,4,5]";
-    SelfUtil selfUtil;
-    vector<vector<string>> v = selfUtil.split(ss);
-    int a = atoi(v[0][0].c_str());
-    TreeNode* root = selfUtil.deserialize(ss);
-    vector<TreeNode*> l1, l2;
-    //cout << setprecision(18) << a;
-    //cout << "a";
+    //Solution solution;
+    unordered_map<string, bool> ht;
+    ht["123"] = true;
+    cout << ht["123"];
+    //solution.permutation("aab");
+    //cout << ss.substr(1);
+    ListNodeSolution listNodeSolution;
+    cout << listNodeSolution.copyRandomList(NULL);
 }
 
 
