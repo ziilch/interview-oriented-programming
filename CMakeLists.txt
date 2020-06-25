@@ -15,6 +15,4 @@ project(interview-programming)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES ./ main.cpp src/)
-
-add_executable(interview-programming ${SOURCE_FILES})
+add_executable(interview-programming ./ main.cpp src/)

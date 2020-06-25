@@ -5,6 +5,7 @@
 #include "includes/BaseInclude.h"
 #include "src/SelfUtil.hpp"
 #include "src/ListNode.hpp"
+#include "src/HeapMethod.hpp"
 #include <iomanip>
 #include <regex>
 
@@ -12,14 +13,15 @@
 
 int main(int argc, char* argv[])
 {
-    //Solution solution;
-    unordered_map<string, bool> ht;
-    ht["123"] = true;
-    cout << ht["123"];
-    //solution.permutation("aab");
-    //cout << ss.substr(1);
-    ListNodeSolution listNodeSolution;
-    cout << listNodeSolution.copyRandomList(NULL);
+    MedianFinder me;
+    priority_queue<int, vector<int>, less<int>> lh;
+    lh.push(2);
+    lh.push(1);
+    lh.push(3);
+    lh.push(4);
+    lh.pop();
+    cout << lh.size();
+
 }
 
 
