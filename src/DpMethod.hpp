@@ -24,6 +24,26 @@ public:
         for (int i = 0; i < n; ++i) res = max(res, dp[i]);
         return res;
     }
+
+    /**
+     * E-L53-***
+     * 这个题目的难点就在于状态转移方程：只需要知道包含第i个数的数组状态即可
+     * dp[i] = dp[i - 1] > 0 ? nums[i] + dp[i - 1] : nums[i]
+     * @param nums
+     * @return
+     */
+    int maxSubArray(vector<int>& nums) {
+        vector<int> dp(nums.size());
+        dp[0] = nums[0];
+        for (int i = 1; i < nums.size(); i ++) {
+            dp[i] = dp[i - 1] > 0 ? dp[i - 1] + nums[i] : nums[i];
+        }
+        int max = dp[0];
+        for (int i = 1; i < nums.size(); i ++) {
+            if (dp[i] > max) max = dp[i];
+        }
+        return max;
+    }
 };
 
 

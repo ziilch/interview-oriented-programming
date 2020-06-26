@@ -6,22 +6,26 @@
 #include "src/SelfUtil.hpp"
 #include "src/ListNode.hpp"
 #include "src/HeapMethod.hpp"
-#include <iomanip>
-#include <regex>
 
-#include <cctype>
+int lengthOfLongestSubstring(string s) {
+    unordered_map<char, int> ht;
+    int len = 0;
+    for (int i = 0, j = 0; j < s.size(); j ++) {
+        if (ht.find(s[j]) != ht.end() && ht[s[j]] >= i) {
+            i = ++ ht[s[j]];
+        }
+        if (j -i + 1 > len) len = j - i + 1;
+        ht[s[j]] = j;
+    }
+    return len;
+}
 
 int main(int argc, char* argv[])
 {
-    MedianFinder me;
-    priority_queue<int, vector<int>, less<int>> lh;
-    lh.push(2);
-    lh.push(1);
-    lh.push(3);
-    lh.push(4);
-    lh.pop();
-    cout << lh.size();
-
+    unordered_set<int> st;
+    st.insert(3);
+    cout << lengthOfLongestSubstring("abcabcbb");
+    //cout << (ht.find('a') == ht.end());
 }
 
 
