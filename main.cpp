@@ -6,26 +6,33 @@
 #include "src/SelfUtil.hpp"
 #include "src/ListNode.hpp"
 #include "src/HeapMethod.hpp"
-
-int lengthOfLongestSubstring(string s) {
-    unordered_map<char, int> ht;
-    int len = 0;
-    for (int i = 0, j = 0; j < s.size(); j ++) {
-        if (ht.find(s[j]) != ht.end() && ht[s[j]] >= i) {
-            i = ++ ht[s[j]];
-        }
-        if (j -i + 1 > len) len = j - i + 1;
-        ht[s[j]] = j;
+vector<int> constructArr(vector<int>& a) {
+    if (a.empty()) return a;
+    int n = a.size();
+    vector<int> l(n);
+    vector<int> r(n);
+    l[0] = 1;
+    r[n - 1] = 1;
+    for (int i = 1; i < n; i ++) {
+        l[i] = l[i - 1] * a[i - 1];
+        r[n - i - 1] = r[n - i] * a[n - i];
     }
-    return len;
+    vector<int> res;
+    for (int i = 0; i < n; i ++) {
+        res.push_back(l[i] * r[i]);
+    }
+    return res;
 }
 
 int main(int argc, char* argv[])
 {
-    unordered_set<int> st;
-    st.insert(3);
-    cout << lengthOfLongestSubstring("abcabcbb");
-    //cout << (ht.find('a') == ht.end());
+    map<int, int> mp;
+    cout << mp[0];
+    string s1 = "123";
+    string s2 = "456";
+    vector<int> v = {1,2,3,4,5};
+    constructArr(v);
+    // 101 ^ 110 = 011
 }
 
 
