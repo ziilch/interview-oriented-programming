@@ -5,7 +5,7 @@
 #ifndef INTERVIEW_PROGRAMMING_SELF_TEST
 #define INTERVIEW_PROGRAMMING_SELF_TEST
 
-#include "SortMethod.hpp"
+#include "sort_method.hpp"
 #include "SelfUtil.hpp"
 class SelfTest {
 public:

@@ -4,8 +4,8 @@
 
 #ifndef INTERVIEW_PROGRAMMING_HEAP_METHOD
 #define INTERVIEW_PROGRAMMING_HEAP_METHOD
-#include "../includes/BaseInclude.h"
-class HeapMethod {
+#include "../includes/base_include.h"
+class heap_method {
 public:
 
 };

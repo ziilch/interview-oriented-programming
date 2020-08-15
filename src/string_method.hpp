@@ -4,7 +4,7 @@
 
 #ifndef INTERVIEW_PROGRAMMING_STRINGMETHOD_HPP
 #define INTERVIEW_PROGRAMMING_STRINGMETHOD_HPP
-#include "../includes/BaseInclude.h"
+#include "../includes/base_include.h"
 
 class StringMethod {
 public:

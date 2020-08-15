@@ -2,8 +2,8 @@
 // Created by zilch on 2019/8/24.
 //
 
-#ifndef INTERVIEW_PROGRAMMING_BASEINCLUDE_H
-#define INTERVIEW_PROGRAMMING_BASEINCLUDE_H
+#ifndef INTERVIEW_PROGRAMMING_BASE_INCLUDE_H
+#define INTERVIEW_PROGRAMMING_BASE_INCLUDE_H
 
 #include <algorithm>
 #include <unordered_map>
@@ -25,7 +25,7 @@
 #include <climits>
 
 using namespace std;
-
+#define null NULL;
 struct ListNode {
     int val;
     ListNode *next;
@@ -53,4 +53,4 @@ public:
 };
 
 
-#endif //INTERVIEW_PROGRAMMING_BASEINCLUDE_H
+#endif //INTERVIEW_PROGRAMMING_BASE_INCLUDE_H
