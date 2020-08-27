@@ -9,6 +9,10 @@
 
 class SortMethod {
 public:
+    // 如果是链表快排，那么用快慢指针
+    // 快指针遇到比标准大的数，就往后走
+    // 遇到比标准小的数就和慢指针交换，并且慢指针向后走一位
+    // 走到末尾判断尾部和慢指针所在位置的大小
     void quickSort(vector<int> &arr) {
         dfsQuick(arr, 0, arr.size() - 1);
     }

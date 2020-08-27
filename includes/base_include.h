@@ -23,6 +23,7 @@
 #include <cctype>
 #include <unordered_set>
 #include <climits>
+#include <hash_set>
 
 using namespace std;
 #define null NULL;

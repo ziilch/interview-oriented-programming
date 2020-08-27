@@ -13,7 +13,9 @@ SelfUtil selfUtil;
 int main(int argc, char* argv[])
 {
     vector<int> tt = {2,3,1,2,4,3};
-    cout << a;
+    reverse(tt.begin(), tt.end());
+    selfUtil.printVec(tt);
+
 }
 
 
