@@ -9,13 +9,19 @@
 #include "src/double_pointer.hpp"
 
 SelfUtil selfUtil;
+bool bigger(ListNode* a, ListNode* b){return a->val > b->val;}
+
+struct cmp{
+    bool operator()(ListNode *a,ListNode *b){
+        return a->val > b->val;
+    };
 
 int main(int argc, char* argv[])
 {
     vector<int> tt = {2,3,1,2,4,3};
     reverse(tt.begin(), tt.end());
     selfUtil.printVec(tt);
-
+    priority_queue<ListNode*, vector<ListNode*>, cmp> pq;
 }
 
 

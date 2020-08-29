@@ -78,6 +78,46 @@ public:
         }
         return res->next;
     }
+
+    /**
+     * L23-H-*****
+     * 合并k个有序链表，一道十分经典的题目
+     * 有一个简单的思路是合并两个有序的链表
+     * 之后遍历这个list,依次合并，也可以过
+     * 还有一种思路是通过归并排序的思路去做
+     * 走到最底层，然后到上面层层合并
+     * @param lists
+     * @return
+     */
+    ListNode* mergeKLists(vector<ListNode*>& lists) {
+        if (lists.size() == 0) return NULL;
+        return dfs(lists, 0, lists.size() - 1);
+    }
+
+    ListNode* dfs(vector<ListNode*>& list, int st, int ed) {
+        int mid = (st + ed) >> 1;
+        if (st >= ed) return list[st];
+        ListNode* lt = dfs(list, st, mid);
+        ListNode* rt = dfs(list, mid + 1, ed);
+        return mergeTwo(lt, rt);
+    }
+
+    ListNode* mergeTwo(ListNode* l1, ListNode* l2) {
+        ListNode* dum = new ListNode(0);
+        ListNode* res = dum;
+        while (l1 && l2) {
+            if (l1->val <= l2->val) {
+                dum->next = l1;
+                l1 = l1->next;
+            } else {
+                dum->next = l2;
+                l2 = l2->next;
+            }
+            dum = dum->next;
+        }
+        dum->next = l1 == NULL ? l2 : l1;
+        return res->next;
+    }
 };
 
 
