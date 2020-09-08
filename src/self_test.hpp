@@ -6,7 +6,7 @@
 #define INTERVIEW_PROGRAMMING_SELF_TEST
 
 #include "sort_method.hpp"
-#include "SelfUtil.hpp"
+#include "self_util.hpp"
 class SelfTest {
 public:
     void sortCompare(int amount) {

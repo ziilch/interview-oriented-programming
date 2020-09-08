@@ -5,6 +5,7 @@
 #ifndef INTERVIEW_PROGRAMMING_NORMALALGORITHM_H
 #define INTERVIEW_PROGRAMMING_NORMALALGORITHM_H
 
+#include "../includes/base_include.h"
 // LRU缓存机制
 class LRUCache {
 public:
@@ -85,23 +86,24 @@ public:
 };
 
 // 单例模式- 懒汉模式 在第一次使用的时候实例化
-//class LazySingleton
-//{
-//private:
-//    static LazySingleton* instance;
-//private:
-//    LazySingleton() {
-//        //cout << "我是懒汉" << endl;
-//    };
-//    ~LazySingleton() {};
-//public:
-//    static LazySingleton* getInstance()
-//    {
-//        if(instance == NULL)
-//            instance = new LazySingleton();
-//        return instance;
-//    }
-//};
+class LazySingleton
+{
+private:
+    static LazySingleton* instance;
+private:
+    LazySingleton() {
+        cout << "我是懒汉" << endl;
+    };
+    ~LazySingleton() {};
+public:
+    static LazySingleton* getInstance()
+    {
+        if(instance == NULL)
+            instance = new LazySingleton();
+        return instance;
+    }
+};
+LazySingleton* LazySingleton::instance = NULL;
 
 
 

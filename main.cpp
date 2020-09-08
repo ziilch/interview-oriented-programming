@@ -3,25 +3,24 @@
 //
 
 #include "includes/base_include.h"
-#include "src/SelfUtil.hpp"
+#include "src/self_util.hpp"
 #include "src/list_node.hpp"
 #include "src/heap_method.hpp"
 #include "src/double_pointer.hpp"
-
-SelfUtil selfUtil;
-bool bigger(ListNode* a, ListNode* b){return a->val > b->val;}
-
-struct cmp{
-    bool operator()(ListNode *a,ListNode *b){
-        return a->val > b->val;
-    };
+#include "src/normal_algorithm.hpp"
 
 int main(int argc, char* argv[])
 {
-    vector<int> tt = {2,3,1,2,4,3};
-    reverse(tt.begin(), tt.end());
-    selfUtil.printVec(tt);
-    priority_queue<ListNode*, vector<ListNode*>, cmp> pq;
+    vector<int> ps;
+    stack<int> st;
+    deque<int>dq;
+    priority_queue<int> pq;
+    pq.push(1);
+    pq.push(2);
+    pq.push(3);
+    int a = pq.top();
+    cout << a << endl;
+    return 0;
 }
 
 

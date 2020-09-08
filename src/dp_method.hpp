@@ -113,6 +113,27 @@ public:
         }
         return res;
     }
+
+    /**
+     * L55-M-***
+     * 一种方法是用dfs做，遍历所有路径，但是会超时
+     * 另一种方法就是假设是有这样一条路径存在的
+     * 这样做有一个前提，就是如果能到达某个点，那么它之前的所有点一定都可达
+     * 这样遍历所有点能到达的地方，每次把k遍历成最大能到达的地方
+     * 什么时候不可达呢？就是i > k的时候
+     * 说明我们遍历i的时候，i已经遍历到了一个k走不到的地方
+     * 这时候就返回false
+     * @param nums
+     * @return
+     */
+    bool canJump(vector<int>& nums) {
+        int k = 0;
+        for (int i = 0; i < nums.size(); i++) {
+            if (i > k) return false;
+            k = max(k, i + nums[i]);
+        }
+        return true;
+    }
 };
 
 
