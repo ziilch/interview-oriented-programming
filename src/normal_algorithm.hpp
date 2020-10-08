@@ -103,7 +103,12 @@ public:
         return instance;
     }
 };
-LazySingleton* LazySingleton::instance = NULL;
+// 懒汉模式
+//LazySingleton* LazySingleton::instance = NULL;
+
+//恶汉模式
+LazySingleton* LazySingleton::instance = LazySingleton::getInstance();
+
 
 
 
